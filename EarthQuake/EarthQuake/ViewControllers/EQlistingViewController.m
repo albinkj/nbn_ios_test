@@ -51,11 +51,13 @@
 {
     [_mNoDataLabel setHidden:true];
     [_mActivityIndicator setHidden:false];
+    [_mEQListingTable setHidden:true];
     [_mActivityIndicator startAnimating];
     [self getDataFromServer:^(NSDictionary* result) {
         self->mEQdDetailsArray = [[NSArray alloc]initWithArray:[result valueForKey:FEATURES]];
         NSLog(@"deatils :- %@",self->mEQdDetailsArray);
         [self->_mEQListingTable reloadData];
+        [self->_mEQListingTable setHidden:false];
         [self->_mActivityIndicator setHidden:true];
         [self->_mActivityIndicator stopAnimating];
     } failure:^(NSError* error) {
@@ -128,10 +130,10 @@
 
 -(NSString*)getTime:(double)timeStamp
 {
-    NSTimeInterval timeInterval=timeStamp/1000;
+    NSTimeInterval timeInterval=timeStamp/1000.0;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
-    [dateformatter setDateFormat:@"dd-MM-yyyy"];
+    [dateformatter setDateFormat:@"dd/MM/yyy hh:mm a"];
     NSString *dateString=[dateformatter stringFromDate:date];
     return dateString;
 }
