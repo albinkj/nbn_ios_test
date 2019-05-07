@@ -79,7 +79,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9T-p1-Cd2">
-                                                                            <rect key="frame" x="15" y="62" width="42" height="21"/>
+                                                                            <rect key="frame" x="15" y="62" width="137" height="21"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="21" id="EqP-CM-PZp"/>
                                                                             </constraints>
@@ -88,9 +88,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Magnitude :0.3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-gP-DWF">
-                                                                            <rect key="frame" x="77" y="62" width="245" height="21"/>
+                                                                            <rect key="frame" x="172" y="62" width="150" height="21"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="EYh-AO-1c7"/>
+                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="EYh-AO-1c7"/>
                                                                                 <constraint firstAttribute="height" constant="21" id="KeQ-UK-I7b"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>

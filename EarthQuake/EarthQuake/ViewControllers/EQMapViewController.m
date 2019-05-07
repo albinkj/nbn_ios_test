@@ -18,7 +18,6 @@
 
 @interface EQMapViewController ()
 
-@property (weak, nonatomic) IBOutlet MKMapView *mMapView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *mActivityIndicator;
 
 @end

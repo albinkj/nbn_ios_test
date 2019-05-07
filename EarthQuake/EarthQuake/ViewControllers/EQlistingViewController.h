@@ -10,6 +10,9 @@
 
 @interface EQlistingViewController : UIViewController
 
+@property (strong, nonatomic) NSArray* mEQdDetailsArray;
+-(void)setData;
+-(NSString*)getTime:(double)timeStamp;
 
 @end
 

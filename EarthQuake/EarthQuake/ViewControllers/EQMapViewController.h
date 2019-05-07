@@ -12,7 +12,10 @@
 
 @interface EQMapViewController :  UIViewController <MKMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet MKMapView *mMapView;
 @property (weak, nonatomic)  NSDictionary *mEQdeatils;
+
+-(void)loadMap;
 
 @end
 

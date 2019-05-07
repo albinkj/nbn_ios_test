@@ -31,7 +31,6 @@
 
 @interface EQlistingViewController ()
 {
-    NSArray* mEQdDetailsArray;
     NSDictionary *mSelectedEQDetails;
 }
 
@@ -60,7 +59,7 @@
     [_mEQListingTable setHidden:true];
     [_mActivityIndicator startAnimating];
     [self getDataFromServer:^(NSDictionary* result) {
-        self->mEQdDetailsArray = [[NSArray alloc]initWithArray:[result valueForKey:FEATURES]];
+        self->_mEQdDetailsArray = [[NSArray alloc]initWithArray:[result valueForKey:FEATURES]];
         [self->_mEQListingTable reloadData];
         [self->_mEQListingTable setHidden:false];
         [self->_mActivityIndicator setHidden:true];
@@ -91,7 +90,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [mEQdDetailsArray count];
+    return [_mEQdDetailsArray count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,10 +102,10 @@
 {
     EQTableViewCell *cell = (EQTableViewCell*)[tableView dequeueReusableCellWithIdentifier:EQTABLECELL_IDENTIFIER];
     
-    NSString* place = [[[mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQPLACE];
-    NSString* type = [[[mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQTYPE];
-    double time = [[[[mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQTIME] doubleValue];
-    NSString* magnitude = [[[[mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQMAGNITUDE] stringValue];
+    NSString* place = [[[_mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQPLACE];
+    NSString* type = [[[_mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQTYPE];
+    double time = [[[[_mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQTIME] doubleValue];
+    NSString* magnitude = [[[[_mEQdDetailsArray objectAtIndex:indexPath.row] valueForKey:EQPROPERTIES] valueForKey:EQMAGNITUDE] stringValue];
 
     cell.mPlace.text = place;
     cell.mType.text = type;
@@ -117,7 +116,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    mSelectedEQDetails = [mEQdDetailsArray objectAtIndex:indexPath.row];
+    mSelectedEQDetails = [_mEQdDetailsArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:EQTMAPVIEW_IDENTIFIER sender:indexPath];
 }
 

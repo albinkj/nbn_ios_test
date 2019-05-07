@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>EarthQuakeTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7682F214228144F600144A34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7682F22C228144FE00144A34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7682F237228144FE00144A34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

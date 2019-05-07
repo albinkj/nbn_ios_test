@@ -11,6 +11,7 @@
 		6A1CB476BCAC3A58523CA83B /* libPods-EarthQuakeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */; };
 		766AD7BE2281524F00793B66 /* EQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 766AD7BD2281524F00793B66 /* EQTableViewCell.m */; };
 		766AD7C222818BEF00793B66 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766AD7C122818BEF00793B66 /* MapKit.framework */; };
+		766AD7C32281A03D00793B66 /* EQlistingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7682F21C228144F600144A34 /* EQlistingViewController.m */; };
 		7682F21D228144F600144A34 /* EQlistingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7682F21C228144F600144A34 /* EQlistingViewController.m */; };
 		7682F220228144F600144A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7682F21E228144F600144A34 /* Main.storyboard */; };
 		7682F222228144FE00144A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7682F221228144FE00144A34 /* Assets.xcassets */; };
@@ -433,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7682F232228144FE00144A34 /* EarthQuakeTests.m in Sources */,
+				766AD7C32281A03D00793B66 /* EQlistingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
