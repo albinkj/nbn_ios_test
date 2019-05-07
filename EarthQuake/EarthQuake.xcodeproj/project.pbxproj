@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		650CA5CD257055E4B4317AAB /* libPods-EarthQuake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F9CA2967E8D62CB8D8ABA8 /* libPods-EarthQuake.a */; };
 		6A1CB476BCAC3A58523CA83B /* libPods-EarthQuakeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */; };
+		766AD7BE2281524F00793B66 /* EQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 766AD7BD2281524F00793B66 /* EQTableViewCell.m */; };
 		7682F21D228144F600144A34 /* EQlistingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7682F21C228144F600144A34 /* EQlistingViewController.m */; };
 		7682F220228144F600144A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7682F21E228144F600144A34 /* Main.storyboard */; };
 		7682F222228144FE00144A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7682F221228144FE00144A34 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 		6B5D48127C6634686DC9656D /* Pods-EarthQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthQuakeTests.debug.xcconfig"; path = "Target Support Files/Pods-EarthQuakeTests/Pods-EarthQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B9C60D2EB4CD397F2CA8983 /* Pods-EarthQuake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthQuake.release.xcconfig"; path = "Target Support Files/Pods-EarthQuake/Pods-EarthQuake.release.xcconfig"; sourceTree = "<group>"; };
 		6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EarthQuakeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766AD7BC2281524F00793B66 /* EQTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQTableViewCell.h; sourceTree = "<group>"; };
+		766AD7BD2281524F00793B66 /* EQTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQTableViewCell.m; sourceTree = "<group>"; };
 		7682F215228144F600144A34 /* EarthQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7682F21B228144F600144A34 /* EQlistingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQlistingViewController.h; sourceTree = "<group>"; };
 		7682F21C228144F600144A34 /* EQlistingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQlistingViewController.m; sourceTree = "<group>"; };
@@ -106,7 +109,6 @@
 				B63E3D581BA38A6FF56AD515 /* Pods-EarthQuakeUITests.debug.xcconfig */,
 				5893819401C6DD1B056FB959 /* Pods-EarthQuakeUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -118,6 +120,15 @@
 				6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		766AD7BB228151FC00793B66 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				766AD7BC2281524F00793B66 /* EQTableViewCell.h */,
+				766AD7BD2281524F00793B66 /* EQTableViewCell.m */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		7682F20C228144F600144A34 = {
@@ -148,6 +159,7 @@
 				7682F24A2281485F00144A34 /* AppDelegate */,
 				7682F251228148C400144A34 /* ViewControllers */,
 				7682F252228148F500144A34 /* StoryBoard */,
+				766AD7BB228151FC00793B66 /* CustomCells */,
 				7682F221228144FE00144A34 /* Assets.xcassets */,
 				7682F226228144FE00144A34 /* Info.plist */,
 				7682F227228144FE00144A34 /* main.m */,
@@ -404,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766AD7BE2281524F00793B66 /* EQTableViewCell.m in Sources */,
 				7682F21D228144F600144A34 /* EQlistingViewController.m in Sources */,
 				7682F228228144FE00144A34 /* main.m in Sources */,
 				7682F24D2281489C00144A34 /* AppDelegate.m in Sources */,
