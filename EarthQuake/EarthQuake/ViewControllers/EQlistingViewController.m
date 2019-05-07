@@ -6,13 +6,13 @@
 //  Copyright © 2019 Albin Kallambi Johnson. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "EQlistingViewController.h"
 
-@interface ViewController ()
+@interface EQlistingViewController ()
 
 @end
 
-@implementation ViewController
+@implementation EQlistingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
