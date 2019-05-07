@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  EQlistingViewController.m
 //  EarthQuake
 //
 //  Created by Albin Kallambi Johnson on 07/05/19.

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EQlistingViewController.h
 //  EarthQuake
 //
 //  Created by Albin Kallambi Johnson on 07/05/19.
