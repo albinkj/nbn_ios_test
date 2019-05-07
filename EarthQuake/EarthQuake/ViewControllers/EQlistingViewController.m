@@ -30,6 +30,7 @@
 @interface EQlistingViewController ()
 {
     NSArray* mEQdDetailsArray;
+    NSDictionary *mSelectedEQDetails;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mEQListingTable;
@@ -55,7 +56,6 @@
     [_mActivityIndicator startAnimating];
     [self getDataFromServer:^(NSDictionary* result) {
         self->mEQdDetailsArray = [[NSArray alloc]initWithArray:[result valueForKey:FEATURES]];
-        NSLog(@"deatils :- %@",self->mEQdDetailsArray);
         [self->_mEQListingTable reloadData];
         [self->_mEQListingTable setHidden:false];
         [self->_mActivityIndicator setHidden:true];
@@ -115,6 +115,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
+    mSelectedEQDetails = [mEQdDetailsArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:EQTMAPVIEW_IDENTIFIER sender:indexPath];
 }
 
@@ -122,9 +123,8 @@
 {
     if ([segue.identifier isEqualToString:EQTMAPVIEW_IDENTIFIER])
     {
-//        EQMapViewController *pDetailViewController = segue.destinationViewController;
-//        NSIndexPath* pIndexPath = (NSIndexPath*)sender;
-//        pDetailViewController.mpLoanDetails =  [mpResultArray objectAtIndex:pIndexPath.row];
+        EQMapViewController *pDetailViewController = (EQMapViewController*)segue.destinationViewController;
+        pDetailViewController.mEQdeatils =  mSelectedEQDetails;
     }
 }
 
@@ -138,5 +138,10 @@
     return dateString;
 }
 
+
+-(IBAction)unwindForFirstToSegue:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
 
 @end

@@ -6,12 +6,13 @@
 //  Copyright © 2019 Albin Kallambi Johnson. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface EQMapViewController : NSObject
+@interface EQMapViewController :  UIViewController <MKMapViewDelegate>
+
+@property (weak, nonatomic)  NSDictionary *mEQdeatils;
 
 @end
 
-NS_ASSUME_NONNULL_END

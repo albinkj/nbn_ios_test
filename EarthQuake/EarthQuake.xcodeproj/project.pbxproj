@@ -10,6 +10,7 @@
 		650CA5CD257055E4B4317AAB /* libPods-EarthQuake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F9CA2967E8D62CB8D8ABA8 /* libPods-EarthQuake.a */; };
 		6A1CB476BCAC3A58523CA83B /* libPods-EarthQuakeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */; };
 		766AD7BE2281524F00793B66 /* EQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 766AD7BD2281524F00793B66 /* EQTableViewCell.m */; };
+		766AD7C222818BEF00793B66 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766AD7C122818BEF00793B66 /* MapKit.framework */; };
 		7682F21D228144F600144A34 /* EQlistingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7682F21C228144F600144A34 /* EQlistingViewController.m */; };
 		7682F220228144F600144A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7682F21E228144F600144A34 /* Main.storyboard */; };
 		7682F222228144FE00144A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7682F221228144FE00144A34 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EarthQuakeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766AD7BC2281524F00793B66 /* EQTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQTableViewCell.h; sourceTree = "<group>"; };
 		766AD7BD2281524F00793B66 /* EQTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQTableViewCell.m; sourceTree = "<group>"; };
+		766AD7C122818BEF00793B66 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7682F215228144F600144A34 /* EarthQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7682F21B228144F600144A34 /* EQlistingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQlistingViewController.h; sourceTree = "<group>"; };
 		7682F21C228144F600144A34 /* EQlistingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQlistingViewController.m; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766AD7C222818BEF00793B66 /* MapKit.framework in Frameworks */,
 				650CA5CD257055E4B4317AAB /* libPods-EarthQuake.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +118,7 @@
 		70DBB4244CF59FD9A9B77FE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				766AD7C122818BEF00793B66 /* MapKit.framework */,
 				F1F9CA2967E8D62CB8D8ABA8 /* libPods-EarthQuake.a */,
 				DD66924D7DD549F0098AD950 /* libPods-EarthQuakeTests.a */,
 				6FDA0BEE243724C8A5F086D1 /* libPods-EarthQuakeUITests.a */,
@@ -129,6 +133,13 @@
 				766AD7BD2281524F00793B66 /* EQTableViewCell.m */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		766AD7BF2281874500793B66 /* Utilies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilies;
 			sourceTree = "<group>";
 		};
 		7682F20C228144F600144A34 = {
@@ -156,6 +167,7 @@
 		7682F217228144F600144A34 /* EarthQuake */ = {
 			isa = PBXGroup;
 			children = (
+				766AD7BF2281874500793B66 /* Utilies */,
 				7682F24A2281485F00144A34 /* AppDelegate */,
 				7682F251228148C400144A34 /* ViewControllers */,
 				7682F252228148F500144A34 /* StoryBoard */,
