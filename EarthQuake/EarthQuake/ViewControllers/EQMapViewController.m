@@ -14,8 +14,6 @@
 #define EQGEOMETRY @"geometry"
 #define EQCOORDINATE @"coordinates"
 
-#define METERS_PER_MILE 1609.344
-
 @interface EQMapViewController ()
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *mActivityIndicator;

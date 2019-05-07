@@ -56,7 +56,7 @@
     _eqMapToTest.mEQdeatils = finalDictionary;
     [_eqMapToTest loadMap];
     XCTestExpectation *expectation = [self expectationWithDescription:@"Dummy expectation"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         XCTAssert(self->_eqMapToTest.mMapView.annotations == nil, @"Map with specefic loaction notation loaded.");
         [expectation fulfill];
     });

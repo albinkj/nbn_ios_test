@@ -308,7 +308,7 @@
                     </view>
                     <connections>
                         <outlet property="mActivityIndicator" destination="VF8-Li-RZa" id="4JF-6i-fNZ"/>
-                        <outlet property="mMapView" destination="tzc-xf-bAa" id="XJt-zF-cau"/>
+                        <outlet property="mMapView" destination="tzc-xf-bAa" id="IGL-PE-iys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P29-O7-kZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
