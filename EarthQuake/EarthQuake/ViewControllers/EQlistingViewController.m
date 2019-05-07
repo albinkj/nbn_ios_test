@@ -20,6 +20,8 @@
 
 #define CELL_HEIGHT 100
 
+#define EQMagnitude @"Magnitude"
+#define EQDateFormat @"dd/MM/yyy hh:mm a"
 #define EQPROPERTIES @"properties"
 #define EQPLACE @"place"
 #define EQTYPE @"type"
@@ -48,6 +50,9 @@
    
 }
 
+/**
+ set the listing details.
+ **/
 -(void)setData
 {
     [_mNoDataLabel setHidden:true];
@@ -69,11 +74,9 @@
 
 /**
  Get earthquake details from the server.
- @param success A block object to be executed when the task finishes successfully. This block has no return value and takes two arguments: the data task, and the response object created by the client response serializer.
- @param failure A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but encountered an error while parsing the response data. This block has no return value and takes a two arguments: the data task and the error describing the network or parsing error that occurred.
- 
- @see -dataTaskWithRequest:completionHandler:
- */
+ @param success A block object to be executed when the task finishes successfully. This block has return result.
+ @param failure A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but encountered an error while parsing the response data. This block has no return nil.
+  **/
 -(void)getDataFromServer:(void (^)(NSDictionary* result))success failure:(void (^)(NSError* error))failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -90,7 +93,6 @@
 {
     return [mEQdDetailsArray count];
 }
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -109,7 +111,7 @@
     cell.mPlace.text = place;
     cell.mType.text = type;
     cell.mTime.text = [self getTime:time];
-    cell.mMagnitude.text = [NSString stringWithFormat:@"Magnitude : %@", magnitude];;
+    cell.mMagnitude.text = [NSString stringWithFormat:@"%@ : %@",EQMagnitude, magnitude];;
     return cell;
 }
 
@@ -128,17 +130,24 @@
     }
 }
 
+/**
+ Get time details from timestamp.
+ @param timeStamp timestamp in millisecond.
+ @return date in string format.
+ **/
 -(NSString*)getTime:(double)timeStamp
 {
     NSTimeInterval timeInterval=timeStamp/1000.0;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
-    [dateformatter setDateFormat:@"dd/MM/yyy hh:mm a"];
+    [dateformatter setDateFormat:EQDateFormat];
     NSString *dateString=[dateformatter stringFromDate:date];
     return dateString;
 }
 
-
+/**
+  unwind segue for back button click.
+ **/
 -(IBAction)unwindForFirstToSegue:(UIStoryboardSegue *)unwindSegue
 {
     

@@ -135,13 +135,6 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
-		766AD7BF2281874500793B66 /* Utilies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilies;
-			sourceTree = "<group>";
-		};
 		7682F20C228144F600144A34 = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +160,6 @@
 		7682F217228144F600144A34 /* EarthQuake */ = {
 			isa = PBXGroup;
 			children = (
-				766AD7BF2281874500793B66 /* Utilies */,
 				7682F24A2281485F00144A34 /* AppDelegate */,
 				7682F251228148C400144A34 /* ViewControllers */,
 				7682F252228148F500144A34 /* StoryBoard */,

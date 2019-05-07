@@ -32,6 +32,9 @@
     
 }
 
+/**
+ Load the map with provided location details.
+ **/
 -(void)loadMap
 {
     [_mActivityIndicator setHidden:false];
@@ -61,6 +64,8 @@
     
     [_mMapView addAnnotation:point];
 }
+
+#pragma mapViewDelegates
 
 -(void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error
 {
