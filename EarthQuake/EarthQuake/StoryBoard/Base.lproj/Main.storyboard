@@ -136,7 +136,7 @@
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="FOJ-fs-Qgp" secondAttribute="trailing" id="0kn-pE-FqD"/>
                                             <constraint firstItem="FOJ-fs-Qgp" firstAttribute="leading" secondItem="Hy4-9v-inY" secondAttribute="leading" id="Uit-Kf-N5O"/>
